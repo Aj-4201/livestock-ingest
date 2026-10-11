@@ -1,0 +1,10 @@
+.env
+.env.*
+# Never commit real ranch data
+samples/real_*/
+*.raw
+*.csv
+!samples/example_*.csv
+.DS_Store
+.idea/
+.vscode/

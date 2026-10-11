@@ -1,0 +1,23 @@
+{
+  "source": "csv",
+  "entity": "animals",
+  "target_table": "animals",
+  "mappings": {
+    "TAG NO":     "tag_number",
+    "ANIMAL NAME":"name",
+    "SEX":        "sex",
+    "DOB":        "date_of_birth",
+    "BREED":      "breed_id",
+    "ORIGIN":     "origin",
+    "STATUS":     "status"
+  },
+  "lookups": {
+    "breed_id": { "type": "reference", "table": "breeds", "match_on": "name" }
+  },
+  "required": ["tag_number"],
+  "enums": {
+    "sex":    ["male", "female", "unknown"],
+    "origin": ["purchased", "local", "newborn"],
+    "status": ["active", "sold", "dead", "archived"]
+  }
+}
